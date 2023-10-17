@@ -11,17 +11,16 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :balanceI, style: "display: block" %>
-    <%= form.number_field :balanceI %>
+  <div class="mb-3">
+    <%= form.label :balanceI, "Saldo Inicial", class:"form-label" %>
+    <%= form.number_field :balanceI, class:"form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.file_field :photo %>
   </div>
 
   <div>
-    <%= form.label :balanceA, style: "display: block" %>
-    <%= form.number_field :balanceA %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-success" %>
   </div>
 <% end %>

@@ -1,6 +1,38 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @balance %>
+
+<!-- TABLA -->
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Fecha</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Ingresos</th>
+      <th scope="col">Egresos</th>
+      <th scope="col">Saldo </th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <th scope="row"><%= @balance.created_at %></th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td> $ <%= @balance.balanceI %> </td>
+    </tr>
+    
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    
+  </tbody>
+</table>
+
+<%= link_to "Crear Movimiento", new_balance_movement_path(@balance) %>
 
 <div>
   <%= link_to "Edit this balance", edit_balance_path(@balance) %> |

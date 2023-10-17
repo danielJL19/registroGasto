@@ -1,4 +1,6 @@
 class Balance < ApplicationRecord
+
+    has_one_attached :photo
     #relationships 
     has_many :movements
     

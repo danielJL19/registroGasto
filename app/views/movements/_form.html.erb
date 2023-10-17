@@ -1,4 +1,4 @@
-<%= form_with(model: movement) do |form| %>
+<%= form_with(model: [@balance, @balance.movements.build]) do |form| %>
   <% if movement.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(movement.errors.count, "error") %> prohibited this movement from being saved:</h2>
@@ -11,19 +11,19 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :amount, style: "display: block" %>
-    <%= form.number_field :amount %>
+  <div class="mb-3">
+    <%= form.label :amount, class:"form-label" %>
+    <%= form.number_field :amount, class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
+  <div class="mb-3">
+    <%= form.label :description, class:"form-label" %>
+    <%= form.text_field :description, class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :type_movement, style: "display: block" %>
-    <%= form.number_field :type_movement %>
+  <div class="mb-3">
+    <%= form.label :type_movement, class:"form-label" %>
+    <%= form.number_field :type_movement, class:"form-control" %>
   </div>
 
   <div>

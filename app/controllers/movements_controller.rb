@@ -1,4 +1,5 @@
 class MovementsController < ApplicationController
+  before_action :set_balance, only: %i[ new create]
   before_action :set_movement, only: %i[ show edit update destroy ]
 
   # GET /movements or /movements.json
@@ -58,6 +59,10 @@ class MovementsController < ApplicationController
   end
 
   private
+
+    def set_balance
+      @balance = Balance.find(params[:balance_id])
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_movement
       @movement = Movement.find(params[:id])
