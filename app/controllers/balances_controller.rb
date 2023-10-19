@@ -8,6 +8,7 @@ class BalancesController < ApplicationController
 
   # GET /balances/1 or /balances/1.json
   def show
+   
   end
 
   # GET /balances/new
